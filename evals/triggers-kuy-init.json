@@ -1,0 +1,82 @@
+[
+ {
+  "trigger": true,
+  "query": "Run kuy-init on this project"
+ },
+ {
+  "trigger": true,
+  "query": "Init this project for AI agents: set up .agents/rules and AGENTS.md"
+ },
+ {
+  "trigger": true,
+  "query": "Bootstrap .agents rules for my new project, use PSR-12 as the standard"
+ },
+ {
+  "trigger": true,
+  "query": "Generate a code analysis index of all functions and classes so agents save tokens"
+ },
+ {
+  "trigger": true,
+  "query": "Setup AGENTS.md and rules folder for this repo, it is a legacy codebase so keep its conventions"
+ },
+ {
+  "trigger": true,
+  "query": "Tolong init project ini untuk agent: buat .agents/rules dan AGENTS.md"
+ },
+ {
+  "trigger": true,
+  "query": "Buatkan code-analysis dari semua function dan class di project ini, kita belum pakai graphify"
+ },
+ {
+  "trigger": true,
+  "query": "Standardisasi project baru ini dengan rules untuk agent"
+ },
+ {
+  "trigger": true,
+  "query": "kuy-init this repo, but follow our existing lint config"
+ },
+ {
+  "trigger": true,
+  "query": "Init the .agents folder for this project so every markdown doc in it is wikilinked and registered in AGENTS.md"
+ },
+ {
+  "trigger": false,
+  "query": "Commit my changes please."
+ },
+ {
+  "trigger": false,
+  "query": "Make a plan for adding OAuth login."
+ },
+ {
+  "trigger": false,
+  "query": "Design a pricing page for our app"
+ },
+ {
+  "trigger": false,
+  "query": "Write business documentation of this project as a Word file"
+ },
+ {
+  "trigger": false,
+  "query": "Fix the failing test in auth.spec.ts"
+ },
+ {
+  "trigger": false,
+  "query": "Review this pull request for bugs"
+ },
+ {
+  "trigger": false,
+  "query": "Edit rule 02 in .agents/rules to allow single-letter loop variables"
+ },
+ {
+  "trigger": false,
+  "query": "Explain how the payment module works"
+ },
+ {
+  "trigger": false,
+  "query": "Rename the function getUser to fetchUser everywhere"
+ },
+ {
+  "trigger": false,
+  "query": "Tolong buatkan rencana untuk fitur laporan bulanan"
+ }
+]
