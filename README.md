@@ -17,6 +17,38 @@ It is a plain `SKILL.md` folder (plus scripts that need only Python 3), so it wo
 /kuy-init --code-analysis=auto|force|skip
 ```
 
+## Install
+
+With the [`skills`](https://github.com/vercel-labs/skills) CLI (works for Claude Code, Codex, Cursor, Gemini CLI and other agents):
+
+```bash
+npx skills add drnhsproject/kuy-init
+```
+
+Or manually, by copying the skill folder into your agent's skills directory:
+
+```bash
+git clone https://github.com/drnhsproject/kuy-init.git
+# Claude Code, available in every project
+cp -R kuy-init/skills/kuy-init ~/.claude/skills/
+# or only for one project
+cp -R kuy-init/skills/kuy-init <your-project>/.claude/skills/
+```
+
+Requirements: Python 3 and git. Restart the agent session after installing, then run `/kuy-init` inside the project you want to prepare.
+
+## What happens when you run it
+
+1. **Detect.** It checks whether the project is new (no source, manifest or commits) or existing, and which stack, folders, configs and commit style it has.
+2. **Choose the rule source.** Your own standard if you gave one, otherwise the project's existing conventions (existing code), otherwise the bundled neutral standard (new project).
+3. **Preview and ask once.** It shows exactly which files it will create and which it will leave alone. Nothing is written until you confirm (skipped with `--yes`; `--dry-run` stops here).
+4. **Install.** It creates `.agents/` with the rules, helper scripts and symbol index, adds a managed block to `AGENTS.md`, and appends `.agents/` and `AGENTS.md` to `.gitignore`.
+5. **Verify.** It checks that every doc is wikilinked, spot-checks the symbol index against the source, and confirms your old `AGENTS.md` text is intact.
+6. **Report and stop.** It summarizes what was created and kept. It never commits, pushes or deletes.
+
+After that, any agent that opens the project reads `AGENTS.md`, follows the linked rules, and uses `.agents/code-analysis/` to find functions and classes with `grep` instead of reading whole files.
+Re-running is safe: rule files you edited are kept, the rest is refreshed.
+
 ## Where the rules come from
 
 | Project | Rules |
